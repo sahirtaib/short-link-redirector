@@ -1,0 +1,36 @@
+[
+    {
+        "title" : "Short Link Redirector Settings",
+        "properties" : [{
+            "name": "enabled",
+            "label": "Enable Short Link Redirector",
+            "type": "checkbox",
+            "value": "false",
+            "options": [{
+                "value": "true",
+                "label": ""
+            }]
+        },{
+            "name" : "uriListener",
+            "label" : "URI To Catch Short Links",
+            "type" : "textfield",
+            "value": "s"
+        }, {
+            "name": "formId",
+            "label": "Form Id contains Short-Full URLs Mapping",
+            "type": "textfield",
+            "value": "url_mappings"
+        }, {
+            "name": "shortUrlField",
+            "label": "Field Id for Short URL",
+            "type": "textfield",
+            "value": "shortUrl"
+        }, {
+            "name": "fullUrlField",
+            "label": "Field Id for Full URL",
+            "type": "textfield",
+            "value": "fullUrl"
+        }]
+    }
+]
+
