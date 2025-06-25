@@ -3,33 +3,40 @@
         "title" : "Short Link Redirector Settings",
         "properties" : [{
             "name": "enabled",
-            "label": "Enable Short Link Redirector",
+            "label": "Enable this plugin?",
             "type": "checkbox",
             "value": "false",
             "options": [{
                 "value": "true",
                 "label": ""
             }]
-        },{
+        }, {
             "name" : "uriListener",
             "label" : "URI To Catch Short Links",
             "type" : "textfield",
-            "value": "s"
+            "value": "s",
+            "required": "True"
         }, {
-            "name": "formId",
-            "label": "Form Id contains Short-Full URLs Mapping",
-            "type": "textfield",
-            "value": "url_mappings"
-        }, {
-            "name": "shortUrlField",
-            "label": "Field Id for Short URL",
-            "type": "textfield",
-            "value": "shortUrl"
-        }, {
-            "name": "fullUrlField",
-            "label": "Field Id for Full URL",
-            "type": "textfield",
-            "value": "fullUrl"
+            "name" : "urlMappings",
+            "label" : "Short URL Mappings",
+            "type" : "grid",
+            "columns"   : [{
+                "key"   : "shortKey",
+                "label" : "Short Key",
+                "required": "True"
+            }, {
+                "key"   : "targetUrl",
+                "label" : "Target Url",
+                "required": "True"
+            }, {
+                "key": "behavior",
+                "label": "Behavior",
+                "options":[
+                    {"value" : "redirect", "label" : "Redirect"},
+                    {"value" : "forward", "label" : "Forward"}
+                ],
+                "required": "True"
+            }]
         }]
     }
 ]
